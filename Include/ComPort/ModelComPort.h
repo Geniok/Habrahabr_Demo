@@ -44,7 +44,7 @@ private:
     // Поиск существующих COM-портов в системе
     void searchComPorts();
     // Отправка команды на контроллер
-    void MSPquery(int command);
+    void sendCommand(int command);
     // Разбор принятой команды
     void evaluateCommand(quint8 cmd);
 

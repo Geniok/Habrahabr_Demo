@@ -89,11 +89,11 @@ void ModelComPort::onCommand(QString command)
     // Переводим текстовую команду.
     if (command == "On")
     {
-        MSPquery(ON);
+        sendCommand(ON);
     }
     else if (command == "Off")
     {
-        MSPquery(OFF);
+        sendCommand(OFF);
     }
 }
 
@@ -115,7 +115,7 @@ void ModelComPort::searchComPorts()
     }
 }
 
-void ModelComPort::MSPquery(int command)
+void ModelComPort::sendCommand(int command)
 {
     QByteArray buffer;
     quint8 checkSumm = 0;
